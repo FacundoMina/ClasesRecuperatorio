@@ -10,7 +10,9 @@ namespace ClasesRecuperatorio.Data
 {
     public class AplicationDbContext : DbContext
     {
-        public DbSet<Class1> Class1s { get; set; }
+        public DbSet<Libro> Libro { get; set; }
+        public DbSet<Socio> Socio { get; set; }
+        public DbSet<Prestamo> Prestamo { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(
